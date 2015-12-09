@@ -30,19 +30,19 @@ int main(void)
     quarters += 1;
   }
 
-  for( ; cents < 25 && cents > 10; cents -= 10 )
+  for( ; cents < 25 && cents >= 10; cents -= 10 )
   {
     counter += 1;
     dimes += 1;
   }
 
-  for( ; cents < 10 && cents > 1; cents -= 5 )
+  for( ; cents < 10 && cents >= 5; cents -= 5 )
   {
     counter += 1;
     nickels += 1;
   }
 
-  for( ; cents == 1; cents -= 1 )
+  for( ; cents < 5 && cents > 0; cents -= 1 )
   {
     counter += 1;
     pennies += 1;
