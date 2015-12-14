@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
     {
       if (isupper(string[i])) 
       {
-        //char c = string[i] + k
+        // char c = string[i] + k
+        // Wrap around 65 - 90
         if (string[i] + (k % 26) > 90)
         {
           printf("%c", ((string[i] + (k % 26)) % 90 + 64));
