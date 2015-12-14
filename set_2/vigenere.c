@@ -25,22 +25,15 @@ int main(int argc, char *argv[])
     // we could aswell lowercase everything in the keyword
     for (int i = 0; i < m; i++)
     {
-      keyword[i] = tolower(argv[1][i]);
+      keyword[i] = tolower(argv[1][i]) - 'a';
     }
 
     for (int i = 0, n = strlen(string); i < n; i++)
     {
       if (isalpha(string[i]))
       {
-        if (string[i] + keyword[j % m] - 'a' < 'z' + 1)     // 'a'= 97
-        {
-          printf("%c", string[i]  + keyword[j % m] - 'a' );
-        }
-
-        else 
-        {
-          printf("%c", (string[i]  + (keyword[j % m] - 'a')) % 'z' + ('a' - 1) );    // 'a' = 97, 'z' = 122
-        }
+        char c = string[i] - 'a';
+        printf("%c", 'a' + (c + keyword[j % m]) % 26) ;    // 'a' = 97, 'z' = 122
         j++;
       }
 
