@@ -12,7 +12,7 @@
  * where needle is the value to find in a haystack of values
  */
        
-#include <cs50.h>
+#include "cs50.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -39,7 +39,7 @@ int main(int argc, string argv[])
     for (size = 0; size < MAX; size++)
     {
         // wait for hay until EOF
-        printf("\nhaystack[%d] = ", size);
+        printf("\nhaystack[%i] = ", size);
         int straw = GetInt();
         if (straw == INT_MAX)
         {

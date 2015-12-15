@@ -1,4 +1,4 @@
-/***************************************************************************
+/**
  * generate.c
  *
  * Computer Science 50
@@ -10,11 +10,11 @@
  *
  * where n is number of pseudorandom numbers to print
  * and s is an optional seed
- ***************************************************************************/
+ */
  
-// standard libraries
 #define _XOPEN_SOURCE
-#include <cs50.h>
+
+#include "cs50.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     // TODO: comment me
     if (argc != 2 && argc != 3)
     {
-        printf("Usage: generate n [s]\n");
+        printf( "Usage: generate n [s]\n" );
         return 1;
     }
 
